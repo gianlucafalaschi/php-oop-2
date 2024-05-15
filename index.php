@@ -14,7 +14,7 @@ $emporium->setCategory('Gatti');
 
 var_dump($emporium);
 
-$products = new Products();
+$products = new Products('La casa degli animali', 'via degli Alberi 5', 'Crocchette', 15);
 $products->brand = 'Nutrix';
 
 var_dump($products);
