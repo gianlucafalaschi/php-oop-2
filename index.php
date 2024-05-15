@@ -7,16 +7,40 @@ require_once __DIR__ . '/Models/Products.php';
 $emporium = new Emporium('La casa degli animali', 'via degli Alberi 5');
 // $genre e' protected quindi per settarlo devo passare attraverso la funzione
 $emporium->setGenre('Negozio di animali');
-$emporium->year = 2000;
+$emporium->foundationYear = 2000;
 // $category e' protected quindi per settarlo devo passare attraverso la funzione
 $emporium->setCategory('Gatti');
 
 
 var_dump($emporium);
 
-$products = new Products('La casa degli animali', 'via degli Alberi 5', 'Crocchette', 15);
-$products->brand = 'Nutrix';
+$kibble = new Products('La casa degli animali', 'via degli Alberi 5', 'Crocchette', 15);
+$kibble->setGenre('Negozio di animali');
+$kibble->foundationYear = 2000;
+$kibble->setCategory('Gatti');
 
-var_dump($products);
+var_dump($kibble);
+
+$kennel = new Products('La casa degli animali', 'via degli Alberi 5', 'Cuccia', 30);
+$kennel->setGenre('Negozio di animali');
+$kennel->foundationYear = 2000;
+$kennel->setCategory('Gatti');
+
+var_dump($kennel);
+
+$mouse = new Products('La casa degli animali', 'via degli Alberi 5', 'Topo giocattolo', 20);
+$mouse->setGenre('Negozio di animali');
+$mouse->foundationYear = 2000;
+$mouse->setCategory('Gatti');
+
+var_dump($mouse);
+
+$fleaCollar = new Products('La casa degli animali', 'via degli Alberi 5', 'Collare Antipulci', 10);
+$fleaCollar->setGenre('Negozio di animali');
+$fleaCollar->foundationYear = 2000;
+$fleaCollar->setCategory('Gatti');
+
+var_dump($fleaCollar);
+
 ?>
 

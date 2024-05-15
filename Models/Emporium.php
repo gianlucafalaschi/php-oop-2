@@ -4,7 +4,7 @@ class Emporium {
     public $name;
     public $address;
     protected $genre;
-    public $year;
+    public $foundationYear;
     protected $category;
 
 
