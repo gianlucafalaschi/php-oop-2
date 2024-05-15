@@ -21,24 +21,24 @@ public function __construct($_name, $_address) {
     return 'Titolo del film:' . ' ' .  $this->title . '<br> ' . 'Anno del film:' . ' ' . $this->year; 
 } */
 
-    // getter
+    // getter   torna il valore di genre 
     public function getGenre() {
         return $this->genre;
     }
 
 
-    // setter
+    // setter   setta  il valore di genre 
     public function setGenre($newGenre) {
     $this->genre = $newGenre;
     }
     
-    // getter
+    // getter    torna il valore di category 
     public function getCategory() {
         return $this->category;
     }
 
 
-    // setter
+    // setter setta il valore di category 
     public function setCategory($newCategory) {
     $this->category = $newCategory;
     }
