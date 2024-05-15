@@ -9,11 +9,11 @@ class Emporium {
 
 
 // COSTRUTTORE (viene chiamata con new, usato spesso quando voglio dare degli attributi obbligatori, 
-//che scrivo negli argomenti della funzione in questo caso $_title, $_genre )
-public function __construct($_name, $_address, $_category) {
+//che scrivo negli argomenti della funzione
+public function __construct($_name, $_address) {
     $this->name = $_name;
     $this->address = $_address;
-    $this->category = $_category;
+    
 } 
 
 // Funzione che da il nome e l'anno
@@ -26,14 +26,32 @@ public function __construct($_name, $_address, $_category) {
         return $this->genre;
     }
 
+
+    // setter
+    public function setGenre($newGenre) {
+    $this->genre = $newGenre;
+    }
+    
+    // getter
+    public function getCategory() {
+        return $this->category;
+    }
+
+
+    // setter
+    public function setCategory($newCategory) {
+    $this->category = $newCategory;
+    }
+
+
 }
 
-// creo un new Movie e fornisco gli attributi obbligatori del construct ($_title, $_genre)
-$emporium = new Emporium('La casa degli animali', 'via degli Alberi 5', 'Gatto');
+// creo un new Emporium e fornisco gli attributi obbligatori del construct 
+$emporium = new Emporium('La casa degli animali', 'via degli Alberi 5');
 
-$emporium->genre = 'Negozio di animali';
+$emporium->setGenre('Negozio di animali');
 $emporium->year = 2000;
-
+$emporium->setCategory('Gatti');
 
 
 var_dump($emporium);
