@@ -1,5 +1,17 @@
 <?php
 
+// Isolamento delle variabili:
+// public -> classe in cui è dichiarata [si]
+//           classi figlie [si]
+//           nei file di script [si]
+// protected -> classe in cui è dichiarata [si]
+//           classi figlie [si]
+//           nei file di script [no]
+// private -> classe in cui è dichiarata [si]
+//           classi figlie [no]
+//           nei file di script [no]
+
+
 require_once __DIR__ . '/Models/Emporium.php';
 require_once __DIR__ . '/Models/Products.php';
 
