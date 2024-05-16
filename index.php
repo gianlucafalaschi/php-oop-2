@@ -22,7 +22,8 @@ $emporium->setGenre('Negozio di animali');
 $emporium->foundationYear = 2000;
 // $category e' protected quindi per settarlo devo passare attraverso la funzione
 $emporium->setCategory('Gatti');
-
+$emporium->email = 'lacasadeglianimali@smail.it';
+$emporium->phone = '53276847545453';
 
 var_dump($emporium);
 
@@ -31,6 +32,7 @@ $kibble->setGenre('Negozio di animali');
 $kibble->foundationYear = 2000;
 $kibble->setCategory('Gatti');
 $kibble->setEmail('crocchette&crocchette@email.com');
+$kibble->phone = '1236775468';
 
 var_dump($kibble);
 
@@ -39,6 +41,7 @@ $kennel->setGenre('Negozio di animali');
 $kennel->foundationYear = 2000;
 $kennel->setCategory('Gatti');
 $kennel->setEmail('casadelcane@animali.com');
+$kennel->phone = '7472064533787643';
 var_dump($kennel);
 
 $mouse = new Products('La casa degli animali', 'via degli Alberi 5', 'Topo giocattolo', 20);
@@ -46,6 +49,7 @@ $mouse->setGenre('Negozio di animali');
 $mouse->foundationYear = 2000;
 $mouse->setCategory('Gatti');
 $mouse->setEmail('giochiperanimali@email.it');
+$mouse->phone = '373461858063';
 var_dump($mouse);
 
 $fleaCollar = new Products('La casa degli animali', 'via degli Alberi 5', 'Collare Antipulci', 10);
@@ -53,6 +57,7 @@ $fleaCollar->setGenre('Negozio di animali');
 $fleaCollar->foundationYear = 2000;
 $fleaCollar->setCategory('Gatti');
 $fleaCollar->setEmail('antipulci@assistance.com');
+$fleaCollar->phone = '838582858970402';
 var_dump($fleaCollar);
 
 
@@ -80,8 +85,14 @@ $products = [
 </head>
 <body>
     <div class="container">
+        <h1 class="text-center">La casa degli animali</h1>
+        <h2>Assistenza clienti:</h2>
+        <h3>Numero di telefono:<br><?php echo $emporium->phone ?></h3>
+        <h3>Email:<br><?php echo $emporium->email ?> </h3>
+    </div>
+    <div class="container">
         <div class="row">
-            <?php foreach($products as $product) { ?><div class="col mb-3">
+            <?php foreach($products as $product) { ?><div class="col my-3">
                 <div class="card" style="width: 18rem;">
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
@@ -92,6 +103,7 @@ $products = [
                         <li class="list-group-item"><?php echo $product->name ?></li>
                         <li class="list-group-item"><?php echo $product->address ?></li>
                         <li class="list-group-item">Email assistenza clienti: <?php echo $product->getEmail() ?></li>
+                        <li class="list-group-item">Telefono assistenza clienti: <?php echo $product->phone ?></li>
                         <li class="list-group-item"><?php echo $product->getGenre() ?></li>
                         <li class="list-group-item">Anno di fondazione: <?php echo $product->foundationYear ?></li>
                         <li class="list-group-item"><?php echo $product->getCategory() ?></li>

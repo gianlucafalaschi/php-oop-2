@@ -2,7 +2,7 @@
 
 trait BrandCustomerService {
     protected $email;
-    protected $phone;
+    public $phone;
 
  /**   
  * This function returns the value of the procted attribute $email
