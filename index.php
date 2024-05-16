@@ -30,6 +30,7 @@ $kibble = new Products('La casa degli animali', 'via degli Alberi 5', 'Crocchett
 $kibble->setGenre('Negozio di animali');
 $kibble->foundationYear = 2000;
 $kibble->setCategory('Gatti');
+$kibble->setEmail('crocchette&crocchette@email.com');
 
 var_dump($kibble);
 
@@ -37,22 +38,24 @@ $kennel = new Products('La casa degli animali', 'via degli Alberi 5', 'Cuccia', 
 $kennel->setGenre('Negozio di animali');
 $kennel->foundationYear = 2000;
 $kennel->setCategory('Gatti');
-
+$kennel->setEmail('casadelcane@animali.com');
 var_dump($kennel);
 
 $mouse = new Products('La casa degli animali', 'via degli Alberi 5', 'Topo giocattolo', 20);
 $mouse->setGenre('Negozio di animali');
 $mouse->foundationYear = 2000;
 $mouse->setCategory('Gatti');
-
+$mouse->setEmail('giochiperanimali@email.it');
 var_dump($mouse);
 
 $fleaCollar = new Products('La casa degli animali', 'via degli Alberi 5', 'Collare Antipulci', 10);
 $fleaCollar->setGenre('Negozio di animali');
 $fleaCollar->foundationYear = 2000;
 $fleaCollar->setCategory('Gatti');
-
+$fleaCollar->setEmail('antipulci@assistance.com');
 var_dump($fleaCollar);
+
+
 
 
 $products = [
@@ -88,6 +91,7 @@ $products = [
                         <li class="list-group-item"><?php echo $product->price ?> Euro</li>
                         <li class="list-group-item"><?php echo $product->name ?></li>
                         <li class="list-group-item"><?php echo $product->address ?></li>
+                        <li class="list-group-item">Email assistenza clienti: <?php echo $product->getEmail() ?></li>
                         <li class="list-group-item"><?php echo $product->getGenre() ?></li>
                         <li class="list-group-item">Anno di fondazione: <?php echo $product->foundationYear ?></li>
                         <li class="list-group-item"><?php echo $product->getCategory() ?></li>
